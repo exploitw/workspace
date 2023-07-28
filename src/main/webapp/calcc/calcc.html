@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>calcc</title>
+</head>
+<body>
+	 <form method="post" action="calcc.jsp">
+	<input type="text" id="output" name ="n1" value = "" size="10"><br>
+	<button class ="button" onclick="clicknum(7)">7</button>
+	<button class ="button" onclick="clicknum(8)">8</button>
+	<button class ="button" onclick="clicknum(9)">9</button>
+	<button class ="button" name ="operator" onclick="clicknum('/')">/</button><br>
+	<button class ="button" onclick="clicknum(4)">4</button>
+	<button class ="button" onclick="clicknum(5)">5</button>
+	<button class ="button" onclick="clicknum(6)">6</button>
+	<button class ="button" name ="operator" onclick="clicknum('*')">*</button><br>
+	<button class ="button" onclick="clicknum(1)">1</button>
+	<button class ="button" onclick="clicknum(2)">2</button>
+	<button class ="button" onclick="clicknum(3)">3</button>
+	<button class ="button" name ="operator" onclick="clicknum('-')">-</button><br>
+	<button class ="button" onclick="clicknum(0)">0</button>
+	<button class = "button" onclick="claer()">C</button>
+	 <input type ="submit" value="="> 
+	<!-- <button class ="button" onclick="cal()">=</button> -->
+	<button class ="button" name ="operator" onclick="clicknum('+')">+</button><br>
+	
+	
+	 
+	</form>
+	<script>
+	
+	
+	function clicknum(data){
+		output.value = output.value +data;
+	}
+	/*
+	function cal(){
+		let s = output.value;
+		if(s.indexOf("+") != -1){
+			var values = s.indexOf("+");
+			n1 = parseInt(values[0]);
+			n2 = parseInt(values[1]);
+			output.value = n1 + n2;
+		}else if(s.indexOf("-") != -1){
+			var values = s.split("-");
+			n1 = parseInt(values[0]);
+			n2 = parseInt(values[1]);
+			output.value = n1 - n2;
+		}else if(s.indexOf("*") != -1){
+			var values = s.split("*");
+			n1 = parseInt(values[0]);
+			n2 = parseInt(values[1]);
+			output.value = n1 * n2;
+		}else if(s.indexOf("/") != -1){
+			var values = s.split("/");
+			n1 = parseInt(values[0]);
+			n2 = parseInt(values[1]);
+			output.value = n1 / n2;
+		}
+	}
+	*/
+	function claer(){
+        output.value = '';
+    }
+	
+	/*
+	function clicknum(n){
+		if(document.getElementById("output").value == 0){
+            document.getElementById("output").value = n;
+        } else {
+            document.getElementById("output").value += n;
+        }
+		
+	}
+	function cal(){
+		
+		
+		
+	}
+	function claer(){
+       
+        document.getElementById("output").value = '';
+    }*/
+	
+	
+	
+	</script>
+	
+</body>
+</html>
